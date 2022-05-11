@@ -1,0 +1,124 @@
+\documentclass[12pt,a4paper,notitlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\begin{document}
+
+\title{Online Eshop}
+\author{ "Petr Nápravník, Alex Baník, Viktor Špaček, David Schonfeld" }
+\date{Listopad 3 2021}
+\maketitle
+
+\begin{abstract}
+Tento dokument byl vypracovaný společně se všemi členy týmu a ověřuje základní znalosti \LaTeX{}, databází a projektového řízení.
+
+Tým pracoval samostatně a využíval všechny dostupné materiály na Moodle nebo internetu. Veškeré licenční a právní náležitosti jsou upraveny v tomto dokumentu.
+
+Těm, který není tento dokument určen nemají žádné právo na využití obsahu tohoto dokumentu.
+
+Veškerá data osob a předmětů jsou smyšlená a nezakládají se na skutečnosti.
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+
+\section{Popis databáze}
+Tato databázem má učel zobrazit striktně českou vymyšlenou eshop prodejnu. Tato databáze má jednoduchou databázi a ER Diagram
+\\
+který má poukázat a dosvědčit znalosti členů týmu o sestavení jednoduché databáze
+\\
+Tato databáze má 5 tabulek : company, customers, products, sales a payments
+
+Databáze je vytvořena na jazyce MySQL a využívá veškeré technologické vlastnosti této DB.
+\newpage
+\section{Licenční informace a HW požadavky}
+\subsection{Licence}
+Firefox.com - Mozilla Public License ( MPL )
+\\
+Google.com - SaaS
+
+\subsection{Hardware}
+Tato databáze se vypracováva striktně na počítači
+\subsection{Software}
+OverLeaf 
+\\ 
+MySQL
+\\
+FireFox
+\\
+PgModeler
+\newpage
+\section{Enumerizace hodnot}
+\subsection{Normované enumerizace}
+customers table - gender enum ('M', 'F')
+
+\newpage
+\section{Databázová struktura}
+\subsection{ER diagram}
+\includegraphics[scale=0.25]{2.png}
+\subsection{Tabulka Company}
+\subsubsection{Struktura}
+name - varchar(10)
+\\
+id - int
+\\
+tax id - varchar(12)
+\\
+legal establishment - varchar(35)
+\\
+responsible person - varchar(35)
+\\
+email - varchar(50)
+\\
+phone number - varchar(20)
+\\
+customer id - smallint
+\subsubsection{Provázání tabulky}
+1:M - Products table
+\\
+1:M - Customers table
+\subsection{Tabulka Customers}
+\subsubsection{Struktura}
+first name - varchar(30) \\
+last name - varchar(30) \\
+nickname - varchar(30) \\
+gender - char(1) \\
+email - varchar(50) \\
+phone number - varchar(15) \\
+street - varchar(30)\\
+city - varchar(35) \\
+postalcode - smallint\\
+orientation number - smallint \\
+customer id - varchar(25)
+\subsubsection{Provázání tabulky}
+M:N - payments table \\
+M:N - products table \\
+\subsection{Tabulka Products}
+\subsubsection{Struktura}
+name - varchar(100)\\
+price - varchar(20)\\
+id product - integer\\
+type - varchar(15)\\
+\subsubsection{Provázání tabulky}
+M:N - sales table
+
+\subsection{Tabulka Sales}
+\subsubsection{Struktura}
+sale - varchar(5)\\
+id product sale - varchar(50)
+\subsubsection{Provázání tabulky}
+M:N - payments table
+
+\subsection{Tabulka payments}
+\subsubsection{Struktura}
+product - varchar(50)\\
+currency - varchar(30)
+\subsubsection{Provázání tabulky}
+1:M - products table
+
+\end{document}
