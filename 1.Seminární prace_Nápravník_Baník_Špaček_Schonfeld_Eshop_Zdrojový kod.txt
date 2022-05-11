@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+
+
+\title{Online E-Shopy}
+\author{Petr Nápravník, Alex Baník, Viktor Špaček, David Schonfeld}
+
+\date{Listopad 3 2021}
+\maketitle
+
+
+\begin{abstract}
+Tato databáze bude ukazovat  online E-shop a jeho nejprodávanější produkt. Tato část práce popisuje znalosti studentu v \LaTeX programu, a každý student poté sebezhodnotí spolupráci jak sebe tak ostatních členu týmu. Na tento dokument mají právo pouze členové týmu, vypsaní v nadpisu 
+    
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Popis Databáze}
+Tato databáze bude ukazovat frekvenci použití E-shopu a jeho nejprodávanější produkty na bázi online dat
+
+\newpage
+\section{Licenční informace a HW požadavky}
+\subsection{Licence}
+Firefox.com - Mozilla Public License ( MPL ) 
+\\
+Google.com - SaaS 
+\\
+Alza.cz - Alza.cz a.s 
+\subsection{Hardware}
+Tato se vypracováva striktně na počítači 
+\subsection{Software}
+OverLeaf 
+\\ 
+MySQL
+\\
+FireFox
+
+\end{document}
